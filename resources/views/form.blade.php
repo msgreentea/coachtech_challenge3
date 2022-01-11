@@ -84,7 +84,7 @@
     </tr>
     {{-- building_name --}}
     <tr>
-      <th>建物<span>※</span></th>
+      <th>建物</th>
       <td><input type="text" name="building_name" value="{{ old('building_name') }}"</td>
     </tr>
     <tr>

@@ -12,7 +12,6 @@
 
 @section('content')
   <form action="{{ route('register') }}" method="POST">
-  {{-- <form action="" method="POST"> --}}
     @csrf
     <table>
       <tr>
@@ -22,6 +21,7 @@
       </tr>
       <tr>
         <th>性別</th>
+        {{-- <td>{{ $gender }}</td> --}}
         @if ($gender == 1)
             <td>男性</td>
         @endif
