@@ -13,7 +13,6 @@
 
 @section('content')
 <form action="{{ route('confirm') }}" method="get">
-{{-- <form action="" method="get"> --}}
   @csrf
   <table>
     {{-- name --}}
