@@ -25,12 +25,17 @@
     </tr>
     <tr>
       <th></th>
-      <td class="side">
-        <div class="side-item">
-          <p class="example">例）山田</p>
-        </div>
-        <div class="side-item">
-          <p class="example">例）太郎</p>
+      <td>
+        @if ($errors->has('fullname'))
+            <span>{{ $errors->first('fullname') }}</span>
+        @endif
+        <div class="side">
+          <div class="side-item">
+            <p class="example">例）山田</p>
+          </div>
+          <div class="side-item">
+            <p class="example">例）太郎</p>
+          </div>
         </div>
       </td>
     </tr>
@@ -45,7 +50,12 @@
     {{-- email --}}
     <tr>
       <th>メールアドレス<span>※</span></th>
-      <td><input type="text" name="email" value="{{ old('email') }}"></td>
+      <td>
+        <input type="text" name="email" value="{{ old('email') }}">
+        @if ($errors->has('email'))
+              <span>{{ $errors->first('email') }}</span>
+        @endif
+      </td>
     </tr>
     <tr>
       <th></th>
@@ -68,13 +78,21 @@
     <tr>
       <th></th>
       <td class="side">
+        @if ($errors->has('postcode'))
+              <span>{{ $errors->first('postcode') }}</span>
+        @endif
         <p class="example">例）123-4567</p>
       </td>
     </tr>
     {{-- address --}}
     <tr>
       <th>住所<span>※</span></th>
-      <td><input type="text" name="address" value="{{ old('address') }}"></td>
+      <td>
+        <input type="text" name="address" value="{{ old('address') }}">
+        @if ($errors->has('address'))
+            <span>{{ $errors->first('address') }}</span>
+        @endif
+      </td>
     </tr>
     <tr>
       <th></th>
@@ -96,7 +114,12 @@
     {{-- opinion --}}
     <tr>
       <th>ご意見<span>※</span></th>
-      <td><textarea name="opinion" id="" cols="30" rows="10" value="{{ old('opinion') }}"></textarea></td>
+      <td>
+        <textarea name="opinion" id="" cols="30" rows="10" value="{{ old('opinion') }}"></textarea>
+        @if ($errors->has('opinion'))
+              <span>{{ $errors->first('opinion') }}</span>
+        @endif
+      </td>
     </tr>
   </table>
   <button>送信</button>
