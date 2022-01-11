@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class ChallengeController extends Controller
 {
-    //
+    public function form()
+    {
+        return view('form');
+    }
 }
