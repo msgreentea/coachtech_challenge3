@@ -41,8 +41,8 @@ class ChallengeController extends Controller
 
     public function register(ChallengeRequest $request)
     {
-        $items = $request->all();
-        Contact::create($items);
+        $data = $request->all();
+        Contact::create($data);
         return view('thanks');
     }
 }
