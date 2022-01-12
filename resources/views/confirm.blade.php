@@ -25,7 +25,7 @@
         @if ($gender == 1)
             <td>男性</td>
         @endif
-        @if ($gender == 2 )
+        @if ($gender == 2)
             <td>女性</td>
         @endif
         <input type="hidden" name="gender" value="{{$gender}}">

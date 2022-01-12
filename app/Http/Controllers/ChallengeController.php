@@ -19,7 +19,7 @@ class ChallengeController extends Controller
         $fullname = $request->input('familyname') . " " . $request->input('lastname');
         $gender = $request->input('gender');
         $email = $request->input('email');
-        $postcode = $request->input('address');
+        $postcode = $request->input('postcode');
         $address = $request->input('address');
         $building_name = $request->input('building_name');
         $opinion = $request->input('opinion');
@@ -34,14 +34,13 @@ class ChallengeController extends Controller
             'opinion' => $opinion
         ];
 
-        // $items = $request->all();
-
         return view('confirm', $items);
     }
 
     public function register(ChallengeRequest $request)
     {
         $data = $request->all();
+        dd($data);
         Contact::create($data);
         return view('thanks');
     }

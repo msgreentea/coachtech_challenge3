@@ -29,6 +29,19 @@ textarea {
   border: 1px solid #ccc;
 }
 
+
+.side {
+  justify-content: space-between;
+}
 .side-item {
   width:100%;
 }
+.left {
+  padding-right: 15px;
+}
+.postcode-left {
+  padding-right: 15px;
+}
+/* .radio label {
+  padding-left: 20px;
+} */
