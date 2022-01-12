@@ -7,7 +7,9 @@ use App\Models\Contact;
 
 class ContactFactory extends Factory
 {
+
     protected $model = Contact::class;
+
     /**
      * Define the model's default state.
      *
